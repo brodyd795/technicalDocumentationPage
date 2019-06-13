@@ -7,33 +7,57 @@
   </head>
   <body>
     <div class="window">
-      <nav id="navbar">
+      <nav id="navbar" class="responsive">
+        <a href="javascript:void(0);" id="closebtn" onclick="closeNav()">&times;</a>
         <header>
           <h1>Regular Expressions</h1>
         </header>
         <ul>
           <li><a class="nav-link" href="#Intro">Intro</a></li>
-          <li><a class="nav-link" href="#Section_1">Section 1</a></li>
+          <li><a class="nav-link" href="#Section_1">Getting Started</a></li>
           <li><a class="nav-link" href="#Section_2">Section 2</a></li>
+          <li><a class="nav-link" href="#"></a></li>
           <li><a class="nav-link" href="#"></a></li>
 
         </ul>
       </nav>
       <main id="main-doc">
+        <a href="javascript:void(0);" id="openbtn" onclick="openNav()" style="display: none;">&#9776;</a>
+        <h1 id="main-title">Regular Expressions Documentation</h1>
+
         <section class="main-section" id="Intro">
-          <header>Intro</header>
+          <header>Introduction</header>
           <article>
-            <p>Here is a paragraph and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots and lots of text.</p>
-            <code>
-              console.log("Hello World!")
-              //comment
-            </code>
+            <p>When dealing with written language, we often need an easy way to search through the text to find or replace particular strings. For example, you might find yourself needing to find the first or all instances of a data (e.g., 2019-06-10), or you might need to change such strings to a different format (e.g., 6/10/19). Regular expressions were developed for exactly this purpose.</p>
+            <p>This document will walk you through the basics of how regular expressions ('regex' for short) are formed, focusing on the replacement use. Once you've mastered the basics, you can apply this knowledge to the programming language of your choice (e.g., Python, JavaScript, etc.) to work with texts and create useful applications.</p>
+            <p>For this documentation, regular exprssions will be presented in the <code>/<i>matchString</i>/<i>replaceString</i>/</code> format, where the first string is what you are looking to match, and the second is what you'd like to replace each match with.</p>
           </article>
         </section>
 
         <section class="main-section" id="Section_1">
-          <header>Section 1</header>
+          <header>Getting Started</header>
           <article>
+            <p>There are lots of websites available for testing out your regular expressions, such as <a href="https://regex101.com/" target="_blank">Regex101.com</a>. On that site, there are fields for the match string and the substitution string, as well as your own test string. There's also a handy Quick Reference guide in the lower right corner, most of which we will walk through below.</p>
+          </article>
+        </section>
+
+        <section class="main-section" id="Section_2">
+          <header>Section 2</header>
+          <article>
+            <p></p>
+            <code></code>
+            <code></code>
+          </article>
+        </section>
+
+        <section class="main-section" id="Section_2">
+          <header>Section 2</header>
+          <article>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
             <p></p>
           </article>
         </section>
@@ -42,11 +66,26 @@
           <header>Section 2</header>
           <article>
             <p></p>
+            <code></code>
+            <code></code>
           </article>
         </section>
 
-
       </main>
     </div>
+    <script type="text/javascript">
+      function openNav() {
+        document.getElementById("navbar").style.width = "200px";
+        document.getElementById("main-doc").style.marginLeft = "220px"; // this would get removed
+        document.getElementById("openbtn").style.display = "none";
+      }
+
+      function closeNav() {
+        document.getElementById("navbar").style.width = "0px";
+        document.getElementById("main-doc").style.marginLeft = "0px";  // this would get removed
+        document.getElementById("openbtn").style.display = "inline";
+      }
+    </script>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
   </body>
 </html>

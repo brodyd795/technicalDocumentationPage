@@ -1,26 +1,112 @@
+body {
+  background-color: #dee7f7;
+}
+
 #navbar {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   position: fixed;
-  min-width: 200px;
+  /* min-width: 200px; */
+  z-index: 1;
+  width: 200px;
   height: 100%;
   top: 0px;
   left: 0px;
+  transition: 0.5s;
+  overflow-x: hidden;
+  padding-top: 20px;
+  background-color: #44474c;
+}
+
+#navbar h1 {
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  color: white;
+}
+
+#navbar ul {
+  list-style: none;
+  padding-left: 10px;
+  /* margin-left: 0; */
+  text-decoration: none;
+}
+
+#navbar a {
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.3s;
+  display: block;
+  color: white;
+  padding-top: 7px;
+}
+
+#closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  margin-left: 50px;
+  /* float: right; */
+  color: black;
+  /* display: none; */
+}
+
+#openbtn {
+  text-decoration: none;
+  color: blue;
+}
+
+#navbar a:hover {
+  color: #96bbf7;
 }
 
 #main-doc {
-  border: 1px solid blue;
-  margin-left: 250px;
-  padding: 20px;
+  /* border-left: 1px solid blue; */
+  margin-left: 220px; /* this would get removed */
+  /* padding: 20px; /* this would get removed */ */
   margin-right: 0px;
   top: 0px;
+  transition: margin-left .5s; /* this would get removed */
+  height: 100vh;
+  /* background-color: white; */
 }
 
 #main-doc header {
-  color: blue;
+  color: black;
   font-size: 30px;
+  border-bottom: 1px solid black;
+  /* bord */
+}
+
+#main-title {
+  text-align: center;
 }
 
 article {
-  height: 100px;
-  border: 1px dashed green;
+  /* border: 1px blue; */
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  font-family: sans-serif;
+  /* background-color: ; */
+}
+
+code {
+  color: white;
+  background-color: gray;
+}
+
+@media screen and (max-width: 815px) {
+  /* for mobile devices */
+  #main-doc header {
+    color: blue;
+  }
+  #main-doc {
+    margin-left: 0;
+    padding: 0;
+  }
+  #navbar {
+    width: 0;
+
+  }
+
 }
